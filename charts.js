@@ -1,5 +1,3 @@
-//Load when document is ready
-$(document).ready(function () {
   //Load chart package
   google.charts.load('current', { 'packages': ['corechart'] });
   google.charts.load('current', { 'packages': ['gauge'] });
@@ -52,7 +50,7 @@ $(document).ready(function () {
       gage_data.setValue(1, 1, parseFloat(json[1][2]));
       gage_data.setValue(2, 1, parseFloat(json[1][3]));
       graph.draw(graph_data, graph_options);
-      gage.draw(gage_data, gage_options)
+      gage.draw(gage_data, gage_options);
       $("#time").text(json[1][0]);
     }
 
@@ -61,4 +59,4 @@ $(document).ready(function () {
 
     //hide graph after loading it once
     $("#graph_div").hide();
-  }
+  
